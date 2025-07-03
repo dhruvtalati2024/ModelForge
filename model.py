@@ -8,11 +8,9 @@ from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.dimensions import ColumnDimension
 import numpy as np # Import numpy for np.nan
+import streamlit as st
 
-# === CONFIG ===
-# It's highly recommended to load API_KEY from an environment variable for security
-# For now, keeping it here as per your original script, but be mindful in production
-API_KEY = "fAFye0LEj92N3uvQAV54r5SRPgFtG2MX"
+API_KEY = st.secrets["API_KEY"]
 SAVE_PATH = os.path.expanduser("~/Desktop/Model")
 os.makedirs(SAVE_PATH, exist_ok=True)
 
